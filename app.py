@@ -1,5 +1,8 @@
 import streamlit as st
-import faiss
+try:
+    import faiss
+except ImportError:
+    faiss = None
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
